@@ -12,7 +12,7 @@ This bot requires 3 tokens to run:
 - A [SongLink](https://odesli.co/) token. You gotta e-mail them for that, and for that reason this token is optional. **Just make sure to take off `&key=<key>` at `/src/handler/handle_callback`.**
 
 ## Config file
-All those tokens described aboved must be in a config.json file at the root of the project (see `config.json.example`). Once that's done the bot should work normally.
+All those tokens described aboved must be in a config.json file at the root of the project. Also look for the `config.json.example` for more keys to add. *Yes, they're required too*. Once that's done the bot should work normally.
 
 # Contributing
 All kind of contributions are welcome! Just make sure to use the right buttons when providing feedback, such as the Issue tab for issues and the Pull Request tab for improvements/feature requests.
