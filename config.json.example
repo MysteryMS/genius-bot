@@ -1,0 +1,7 @@
+{
+  "telegramToken": "",
+  "geniusToken": "",
+  "songLinkToken": "",
+  "webhookUrl": "",
+  "debug": true
+}
