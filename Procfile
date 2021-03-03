@@ -1,1 +1,0 @@
-web: src/main.go -p 80
