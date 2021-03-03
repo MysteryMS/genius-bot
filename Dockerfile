@@ -1,6 +1,6 @@
 FROM golang:alpine AS builder
 WORKDIR /src
-COPY ./src /src
+COPY . /src
 RUN cd ./src && go build -o genius
 
 FROM alpine
