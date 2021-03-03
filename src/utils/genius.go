@@ -66,6 +66,9 @@ func (query Query) ResolveSearch() search.Body {
 
 	bArray, readError := ioutil.ReadAll(resp.Body)
 	Debug("ResolveSearch: " + resp.Status)
+	if resp.StatusCode != 200 {
+		Warn(string(bArray))
+	}
 
 	if readError != nil {
 		Fatal(readError.Error())
