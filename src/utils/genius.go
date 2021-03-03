@@ -24,7 +24,7 @@ func (query Query) ResolveTrack() track.Body {
 
 	client := &http.Client{}
 
-	req, err := http.NewRequest("GET", fmt.Sprintf("https://genius.com/api/songs/%s?text_format=html", query), nil)
+	req, err := http.NewRequest("GET", fmt.Sprintf("https://api.genius.com/songs/%s?text_format=html", query), nil)
 
 	req.Header.Add("Authorization", "Bearer "+config.Genius)
 	resp, err := client.Do(req)
@@ -54,7 +54,7 @@ func (query Query) ResolveSearch() search.Body {
 
 	client := &http.Client{}
 
-	req, err := http.NewRequest("GET", fmt.Sprintf("https://genius.com/api/search?q=%s", query), nil)
+	req, err := http.NewRequest("GET", fmt.Sprintf("https://api.genius.com/search?q=%s", query), nil)
 
 	req.Header.Add("Authorization", "Bearer "+config.Genius)
 	resp, err := client.Do(req)
