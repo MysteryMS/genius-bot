@@ -1,1 +1,1 @@
-web: go run src/main.go -p 80
+web: src/main.go -p 80
