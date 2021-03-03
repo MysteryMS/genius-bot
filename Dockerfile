@@ -1,9 +1,9 @@
-FROM golang:alphine AS builder
+FROM golang:alpine AS builder
 WORKDIR /src
 COPY ./src /src
-RUN cd ./src  && go build -o genius
+RUN cd ./src && go build -o genius
 
-FROM alphine
+FROM alpine
 WORKDIR /app
 COPY --from=builder /src/genius /app
 
