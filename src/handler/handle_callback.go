@@ -68,7 +68,7 @@ func RetrieveInfo(trackId string, queryId string) {
 			bio = strings.Split(bio, "\n")[0] + metaData
 		}*/
 
-	replacer := strings.NewReplacer("-", "\\-", ".", "\\.", ">", "\\>", "!", "\\!", "+", "\\+", "=", "\\=")
+	replacer := strings.NewReplacer("-", "\\-", ".", "\\.", ">", "\\>", "!", "\\!", "+", "\\+", "=", "\\=", "(", "\\(", ")", "\\)")
 	metaReplacer := strings.NewReplacer("(", "\\(", ")", "\\)", ".", "\\", "+", "\\+", "!", "\\!", "-", "\\-")
 	bio := replacer.Replace(convertString)
 	if bio == "?" {
