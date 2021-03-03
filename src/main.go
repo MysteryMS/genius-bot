@@ -61,7 +61,9 @@ func updateWebhook(url string, token string) bool {
 	}
 
 	if swReq.StatusCode != 200 {
-		print("[WARN] Request failed\n")
+		body, _ := ioutil.ReadAll(swReq.Body)
+		utils.Warn("Request failed")
+		utils.Warn(string(body))
 		return false
 	}
 
