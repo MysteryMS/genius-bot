@@ -13,7 +13,7 @@ func Info(msg string) {
 
 func Warn(msg string) {
 	w := color.New(color.FgYellow).Add(color.Bold)
-	_, _ = w.Printf("[WARN] %s", msg)
+	_, _ = w.Printf("[WARN] %s\n", msg)
 }
 
 func Debug(msg string) {

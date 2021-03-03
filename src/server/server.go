@@ -18,7 +18,10 @@ func StartServer() {
 			return
 		}
 
-		byteValue, _ := ioutil.ReadFile("config.json")
+		byteValue, readErr := ioutil.ReadFile("config.json")
+		if readErr != nil {
+			utils.Fatal("config.json not loaded!")
+		}
 		var config structs.Config
 		_ = json.Unmarshal(byteValue, &config)
 
